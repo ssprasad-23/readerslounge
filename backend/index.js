@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express, { request, response } from "express";
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import { PORT } from "./config.js"
@@ -54,6 +54,66 @@ app.get('/books', async (request, response) => {
         });
     } catch (error) {
         console.log(error.messsage);
+        response.status(500).send({ message: error.message });
+    }
+});
+
+// routes to Get One Book from database by id
+app.get('/books/:id', async (request, response) => {
+    try {
+
+        const { id } = request.params;
+
+        const book = await Book.findById(id);
+        return response.status(200).json(book);
+    } catch (error) {
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
+//route for Update a book
+app.put('/books/:id', async (request, response) => {
+    try{
+        if (
+            !request.body.title ||
+            !request.body.author ||
+            !request.body.publishYear
+        ){
+            return response.status(400).send({
+                message: 'Send all required fields: title, author, publishYear',
+            });
+        }
+
+        const { id } = request.params;
+
+        const result = await Book.findByIdAndUpdate(id, request.body);
+
+        if (!result){
+            return response.status(404).json({ message: 'Book not found'});
+        }
+        return response.status(200).send({ message: "Book updated successfully"});
+    }   catch(error){
+        console.log(error.message);
+        response.status(500).send({ message: error.message });
+    }
+});
+
+//routes for deleting a book
+app.delete('/books/:id', async (request, response) => {
+    try {
+        const { id } = request.params;
+
+        const result = await Book.findByIdAndDelete(id);
+
+        if (!result) {
+            return response.status(404).json({ message: 'Book not found' });
+        }
+
+        return response.status(200).send({ messgae: 'Book deleted successfully' })
+
+    } catch (error) {
+        console.log(error.message);
         response.status(500).send({ message: error.message });
     }
 });
