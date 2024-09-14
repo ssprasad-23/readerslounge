@@ -38,7 +38,7 @@ router.get('/', async (request, response) => {
             data: books
         });
     } catch (error) {
-        console.log(error.messsage);
+        console.log(error.message);
         response.status(500).send({ message: error.message });
     }
 });
