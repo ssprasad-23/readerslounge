@@ -13,7 +13,7 @@ const mongoDBURL = process.env.MONGODB_URL;
 
 const app = express()
 
-// Middlewear for parsing reqyest body
+// Middlewear for parsing request body
 app.use(express.json());
 
 //Middlewear for handling cors policy
