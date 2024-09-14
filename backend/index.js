@@ -1,9 +1,11 @@
 import express, { request, response } from "express";
 import dotenv from 'dotenv';
-import mongoose from "mongoose";
-import { PORT } from "./config.js"
+import mongoose from 'mongoose';
+import { PORT } from './config.js'
 import { Book } from './models/bookModel.js'
 import bookRoute from './routes/booksRoute.js'
+import cors from 'cors'
+
 
 dotenv.config();
 
@@ -13,6 +15,9 @@ const app = express()
 
 // Middlewear for parsing reqyest body
 app.use(express.json());
+
+//Middlewear for handling cors policy
+app.use(cors());
 
 
 app.get('/', (request, response) => {
