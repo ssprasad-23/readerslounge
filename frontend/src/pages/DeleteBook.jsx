@@ -4,7 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
-import dotenv from "dotenv";
+
 
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete('http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}')
+      .delete(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', {variant: 'success'});

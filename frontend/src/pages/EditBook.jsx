@@ -4,7 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
-import dotenv from "dotenv";
+
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get('http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}')
+      .get(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -39,7 +39,7 @@ const EditBook = () => {
     };
     setloading(true);
     axios
-      .put(`http://localhost:3000/books/${id}`, data)
+      .put(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`, data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Edited Successfully', { variant: 'success'});
