@@ -12,7 +12,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
+      .get(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

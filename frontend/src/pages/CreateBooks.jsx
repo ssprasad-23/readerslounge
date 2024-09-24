@@ -22,7 +22,7 @@ const CreateBooks = () => {
     };
     setloading(true);
     axios
-      .post('http://bookstore-project-mern-fullstack-production.up.railway.app/books', data)
+      .post('https://bookstore-project-mern-fullstack-production.up.railway.app/books', data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Created Successfully', { variant: 'success'});

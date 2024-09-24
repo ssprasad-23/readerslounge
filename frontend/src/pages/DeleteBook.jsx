@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
+      .delete(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', {variant: 'success'});

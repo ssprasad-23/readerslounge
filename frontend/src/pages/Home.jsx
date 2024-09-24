@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://bookstore-project-mern-fullstack-production.up.railway.app/books')
+      .get('https://bookstore-project-mern-fullstack-production.up.railway.app/books')
       .then((response) => {
         console.log(response.data);
         setBooks(response.data.data);

@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
+      .get(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -39,7 +39,7 @@ const EditBook = () => {
     };
     setloading(true);
     axios
-      .put(`http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`, data)
+      .put(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`, data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Edited Successfully', { variant: 'success'});
