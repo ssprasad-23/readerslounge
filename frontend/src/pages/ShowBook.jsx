@@ -13,7 +13,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/books/${id}`)
+      .get('http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}')
       .then((response) => {
         setBook(response.data);
         setLoading(false);

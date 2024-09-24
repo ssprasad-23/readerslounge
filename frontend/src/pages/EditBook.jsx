@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setloading(true);
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/books/${id}`)
+      .get('http://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}')
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);

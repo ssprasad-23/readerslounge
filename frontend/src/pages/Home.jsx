@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/books`)
+      .get('http://bookstore-project-mern-fullstack-production.up.railway.app/books')
       .then((response) => {
         console.log(response.data);
         setBooks(response.data.data);
