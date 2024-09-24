@@ -12,7 +12,7 @@ const CreateBooks = () => {
   const [publishYear, setPublishYear] = useState('');
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
-  const {enqueueSnackbar} = useSnackbar;
+  const {enqueueSnackbar} = useSnackbar();
 
   const handleSaveBook = () => {
     const data = {
