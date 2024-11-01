@@ -30,18 +30,17 @@ const Home = () => {
 
   return (
     <div className="p-4">
+      <div className="flex justify-center items-center mb-8">
+        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-yellow-500 to-red-500 text-transparent bg-clip-text drop-shadow-lg">Greatest Books of All Time</h1>
+      </div>
       <div className="flex justify-center items-center gap-x-4">
         <button
           className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
-          onClick={() => setShowType("table")}
-        >
-          Table
+          onClick={() => setShowType("table")}>Table
         </button>
         <button
           className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
-          onClick={() => setShowType("card")}
-        >
-          Card
+          onClick={() => setShowType("card")}>Card
         </button>
       </div>
       <div className="flex justify-between items-center">
