@@ -13,6 +13,7 @@ const BooksTable = ({ books }) => {
           <th className="border border-slate-600 rounded-md">Title</th>
           <th className="border border-slate-600 rounded-md ">Author</th>
           <th className="border border-slate-600 rounded-md ">Publish Year</th>
+          <th className="border border-slate-600 rounded-md">Posted By</th>
           <th className="border border-slate-600 rounded-md">Operations</th>
         </tr>
       </thead>
@@ -31,6 +32,9 @@ const BooksTable = ({ books }) => {
               </td>
               <td className="border border-slate-700 rounded-md text-center">
                 {book.publishYear}
+              </td>
+              <td className="border border-slate-700 rounded-md text-center">
+                {book.postedBy}
               </td>
               <td className="border border-slate-700 rounded-md text-center">
                 <div className="flex justify-center gap-x-4">
