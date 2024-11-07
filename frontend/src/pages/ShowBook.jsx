@@ -50,12 +50,12 @@ const ShowBook = () => {
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Posted By</span>
-            <span>{book.publishYear}</span>
+            <span>{book.postedBy}</span>
           </div>
-          <div className='my-4'>
+          {/* <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Create Time</span>
             <span>{new Date(book.createAt).toString()}</span>
-          </div>
+          </div> */}
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Last Update Time</span>
             <span>{new Date(book.updatedAt).toString()}</span>
