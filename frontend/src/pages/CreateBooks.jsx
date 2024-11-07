@@ -10,6 +10,7 @@ const CreateBooks = () => {
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
   const [postedBy, setPostedBy] = useState('');
+  const [bookPin, setBookPin] = useState('');
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
   const {enqueueSnackbar} = useSnackbar();
@@ -20,6 +21,7 @@ const CreateBooks = () => {
       author,
       publishYear,
       postedBy,
+      bookPin,
     };
     setloading(true);
     axios
@@ -75,6 +77,15 @@ const CreateBooks = () => {
             type = 'text'
             value={postedBy}
             onChange={(e) => setPostedBy(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2 w-full'
+          />
+        </div>
+        <div>
+          <label className='text-xl mr-4 text-gray-500'>bookPin (4 digit pin for editing and deleting) </label>
+          <input
+            type = 'number'
+            value={bookPin}
+            onChange={(e) => setBookPin(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
