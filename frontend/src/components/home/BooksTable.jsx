@@ -53,7 +53,7 @@ const BooksTable = ({ books }) => {
           ))
         ) : (
           <tr>
-            <td colSpan="5" className="text-center">
+            <td colSpan="6" className="text-center">
               No Books Available
             </td>
           </tr>
