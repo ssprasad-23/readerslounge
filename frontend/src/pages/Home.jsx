@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-import { AiOutlineEdit } from "react-icons/ai";
-import { BsInfoCircle } from "react-icons/bs";
-import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import { MdOutlineAddBox } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
 
@@ -31,7 +29,9 @@ const Home = () => {
   return (
     <div className="p-4">
       <div className="flex justify-center items-center mb-8">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-yellow-500 to-red-500 text-transparent bg-clip-text drop-shadow-lg">Greatest Books of All Time</h1>
+        <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-800 dark:text-black-500 tracking-wide border-b-2 border-gray-300 pb-2">
+          Readers' Top Picks
+        </h1>
       </div>
       <div className="flex justify-center items-center gap-x-4">
         <button
