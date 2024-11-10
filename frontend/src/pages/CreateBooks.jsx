@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
 
@@ -10,6 +10,8 @@ const CreateBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
+  const [postedBy, setPostedBy] = useState('');
+  const [bookPin, setBookPin] = useState('');
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
   const {enqueueSnackbar} = useSnackbar();
@@ -19,6 +21,8 @@ const CreateBooks = () => {
       title,
       author,
       publishYear,
+      postedBy,
+      bookPin,
     };
     setloading(true);
     axios
@@ -65,6 +69,24 @@ const CreateBooks = () => {
             type = 'number'
             value={publishYear}
             onChange={(e) => setPublishYear(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2 w-full'
+          />
+        </div>
+        <div>
+          <label className='text-xl mr-4 text-gray-500'>Posted By</label>
+          <input
+            type = 'text'
+            value={postedBy}
+            onChange={(e) => setPostedBy(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2 w-full'
+          />
+        </div>
+        <div>
+          <label className='text-xl mr-4 text-gray-500'>bookPin (4 digit pin for editing and deleting) </label>
+          <input
+            type = 'number'
+            value={bookPin}
+            onChange={(e) => setBookPin(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
