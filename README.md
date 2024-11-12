@@ -1,8 +1,8 @@
 Overview
 
-This project is a Books Management Application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). 
-The application allows users to view, create, update, and delete books. 
-It provides both a frontend (React) and backend (Express.js with MongoDB) implementation.
+This project is built using the MERN stack (MongoDB, Express.js, React.js, Node.js). 
+The application allows readers to post their favorite book online and share it with others.
+When posting a book title, it will also ask for a 4-digit key, which will be used to edit and delete the post. 
 
 Features
 
@@ -36,18 +36,19 @@ dotenv
 CORS
 Node.js
 
-Creating a book
-<img width="1085" alt="Screenshot 2024-09-16 at 10 55 10 AM" src="https://github.com/user-attachments/assets/a3a3d539-6824-43ac-a5ea-e372162f6e6c">
+Website
+<img width="1558" alt="Screenshot 2024-11-12 at 3 13 48 AM" src="https://github.com/user-attachments/assets/623e8038-ce5b-4036-a437-2f239a70799b">
 
-Deleting a book
-<img width="1096" alt="Screenshot 2024-09-16 at 10 54 18 AM" src="https://github.com/user-attachments/assets/db1db1e4-75dc-49bf-9847-cf485a74c0c5">
+Creating a book
+<img width="1541" alt="Screenshot 2024-11-12 at 3 14 01 AM" src="https://github.com/user-attachments/assets/64044403-db6e-48ce-a941-ef21b07ff8e8">
 
 Book Detail
-<img width="1089" alt="Screenshot 2024-09-16 at 11 06 25 AM" src="https://github.com/user-attachments/assets/fd4278ec-f975-4864-8796-bf1c5c30b468">
+<img width="1370" alt="Screenshot 2024-11-12 at 3 17 48 AM" src="https://github.com/user-attachments/assets/c1fd521e-2123-4fba-98ce-3f0d64818ff0">
 
-Editing a book
-<img width="1095" alt="Screenshot 2024-09-16 at 11 05 06 AM" src="https://github.com/user-attachments/assets/0ec184a0-ea3c-455e-a464-43e60c1d437d">
 
+
+Pin to edit and delete
+<img width="1541" alt="Screenshot 2024-11-12 at 3 14 23 AM" src="https://github.com/user-attachments/assets/5e8361d7-b8b9-452c-a512-ae643eb0072a">
 
 
 
