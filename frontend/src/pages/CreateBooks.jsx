@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate, } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
+
 const CreateBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
@@ -25,7 +26,7 @@ const CreateBooks = () => {
     };
     setloading(true);
     axios
-      .post('http://localhost:3000/books', data)
+      .post('https://bookstore-project-mern-fullstack-production.up.railway.app/books', data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Created Successfully', { variant: 'success'});
