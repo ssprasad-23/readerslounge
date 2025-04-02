@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
 import { MdOutlineAddBox } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
-
 
 const Home = () => {
   const [Books, setBooks] = useState([]);
@@ -31,7 +30,7 @@ const Home = () => {
     <div className="p-4">
       <div className="flex justify-center items-center mb-8">
         <h1 className="text-4xl md:text-5xl font-serif font-semibold text-gray-800 dark:text-black-500 tracking-wide border-b-2 border-gray-300 pb-2">
-          Readers' Top Picks
+          Readers Top Picks
         </h1>
       </div>
       <div className="flex justify-center items-center gap-x-4">

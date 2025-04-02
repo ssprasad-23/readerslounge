@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
@@ -18,7 +18,10 @@ const DeleteBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:3000/books/${id}`)
+
+    // https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`
+      // .get(`http://localhost:3000/books/${id}`)
+      .get(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
