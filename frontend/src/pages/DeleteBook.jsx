@@ -5,7 +5,6 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState(null);
@@ -33,7 +32,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
+      .delete(`http://localhost:3000/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', { variant: 'success' });

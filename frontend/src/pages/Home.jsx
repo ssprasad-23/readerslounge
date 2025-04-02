@@ -6,7 +6,6 @@ import { MdOutlineAddBox } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
 
-
 const Home = () => {
   const [Books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -14,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('https://bookstore-project-mern-fullstack-production.up.railway.app/books')
+      .get("http://localhost:3000/books")
       .then((response) => {
         console.log(response.data);
         setBooks(response.data.data);
