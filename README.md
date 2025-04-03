@@ -35,8 +35,6 @@ Backend:
 Express.js
 MongoDB
 Mongoose
-dotenv
-CORS
 Node.js
 
 Website
