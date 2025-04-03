@@ -12,8 +12,15 @@ const mongoDBURL = process.env.MONGODB_URL;
 
 const app = express();
 
+// Allow Netlify domain
+const corsOptions = {
+  origin: '*', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204
+};
+
 // Middlewear for parsing request body
-app.use(express.json());
+app.use(express.json(corsOptions));
 
 //Middlewear for handling cors policy
 app.use(cors());
