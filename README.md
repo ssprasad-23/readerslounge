@@ -46,8 +46,6 @@ Creating a book
 Book Detail
 <img width="1370" alt="Screenshot 2024-11-12 at 3 17 48 AM" src="https://github.com/user-attachments/assets/c1fd521e-2123-4fba-98ce-3f0d64818ff0">
 
-
-
 Pin to edit and delete
 <img width="1541" alt="Screenshot 2024-11-12 at 3 14 23 AM" src="https://github.com/user-attachments/assets/5e8361d7-b8b9-452c-a512-ae643eb0072a">
 
