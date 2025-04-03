@@ -20,10 +20,10 @@ const corsOptions = {
 };
 
 // Middlewear for parsing request body
-app.use(express.json(corsOptions));
+app.use(express.json());
 
 //Middlewear for handling cors policy
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.get("/", (request, response) => {
   console.log(request);
