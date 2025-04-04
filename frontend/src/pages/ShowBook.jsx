@@ -12,7 +12,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/books/${id}`)
+      .get(`readerslounge-production.up.railway.app/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

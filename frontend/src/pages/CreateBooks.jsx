@@ -25,7 +25,7 @@ const CreateBooks = () => {
     };
     setloading(true);
     axios
-      .post('http://localhost:3000/books', data)
+      .post('readerslounge-production.up.railway.app/books', data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Created Successfully', { variant: 'success'});
