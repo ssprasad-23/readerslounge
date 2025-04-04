@@ -5,7 +5,6 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const [book, setBook] = useState(null);
@@ -18,9 +17,6 @@ const DeleteBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-
-    // https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`
-      // .get(`http://localhost:3000/books/${id}`)
       .get(`https://bookstore-project-mern-fullstack-production.up.railway.app/books/${id}`)
       .then((response) => {
         setBook(response.data);
