@@ -23,7 +23,6 @@ const ShowBook = () => {
       });
   },[id]);
 
-
   return (
     <div className='p-4'>
       <BackButton />
