@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
+import { backend_URL } from '../config';
 
 const CreateBooks = () => {
   const [title, setTitle] = useState('');
@@ -25,7 +26,7 @@ const CreateBooks = () => {
     };
     setloading(true);
     axios
-      .post('http://localhost:3000/books', data)
+      .post(`${backend_URL}/books`, data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Created Successfully', { variant: 'success'});
@@ -92,9 +93,7 @@ const CreateBooks = () => {
         <button className='p-2 bg-sky-300 m-8' onClick={handleSaveBook}>
           Save
         </button>
-
       </div>
-      
     </div>
   );
 };
