@@ -12,7 +12,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(`readerslounge-production.up.railway.app/${id}`)
+      .get(`rhttps://readerslounge.onrender.com/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

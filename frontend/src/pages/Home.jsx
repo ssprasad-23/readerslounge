@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("readerslounge-production.up.railway.app/books")
+      .get("https://readerslounge.onrender.com/books")
       .then((response) => {
         console.log(response.data);
         setBooks(response.data.data);

@@ -17,7 +17,7 @@ const DeleteBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`readerslounge-production.up.railway.app/books/${id}`)
+      .get(`https://readerslounge.onrender.com/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
@@ -32,7 +32,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`readerslounge-production.up.railway.app/books/${id}`)
+      .delete(`https://readerslounge.onrender.com/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', { variant: 'success' });

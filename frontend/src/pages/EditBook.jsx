@@ -21,7 +21,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`readerslounge-production.up.railway.app/books/${id}`)
+      .get(`https://readerslounge.onrender.com/books/${id}`)
       .then((response) => {
         const data = response.data;
         setAuthor(data.author);
@@ -48,7 +48,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-      .put(`readerslounge-production.up.railway.app/books/${id}`, data)
+      .put(`https://readerslounge.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited Successfully', { variant: 'success' });
