@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineAddBox } from "react-icons/md";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
+import { backend_URL } from "../config";
 
 const Home = () => {
   const [Books, setBooks] = useState([]);
@@ -13,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:3000/books")
+      .get(`${backend_URL}/books`)
       .then((response) => {
         console.log(response.data);
         setBooks(response.data.data);
