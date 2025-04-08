@@ -79,18 +79,18 @@ const EditBook = () => {
       <h1 className='text-3xl my-4'>Edit Book</h1>
 
       {!isVerified ? (
-        <div className='flex flex-col border-2 border-blue-400 rounded-xl w-fit p-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        <div className='flex flex-col items-center rounded-xl w-[500px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <h3 className='text-2xl mb-4'>Enter PIN to Edit this Book</h3>
           <input
             type='password'
             maxLength='4'
             value={enteredPin}
             onChange={(e) => setEnteredPin(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2 w-full mb-4'
+            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center'
             placeholder='4-digit PIN'
           />
           <button
-            className='p-4 bg-blue-600 text-white w-full'
+            className='p-4 bg-blue-600 text-white rounded-full w-40'
             onClick={verifyPin}
             disabled={enteredPin.length !== 4}
           >
