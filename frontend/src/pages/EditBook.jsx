@@ -79,7 +79,7 @@ const EditBook = () => {
       <h1 className='text-3xl my-4'>Edit Book</h1>
 
       {!isVerified ? (
-        <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
+        <div className='flex flex-col border-2 border-blue-400 rounded-xl w-fit p-8 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <h3 className='text-2xl mb-4'>Enter PIN to Edit this Book</h3>
           <input
             type='password'
