@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
-
+import { backend_URL } from '../config';
 
 const ShowBook = () => {
   const [book, setBook] = useState({});
@@ -12,7 +12,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     axios
-      .get(`https://readerslounge.onrender.com/${id}`)
+      .get(`${backend_URL}/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
@@ -30,29 +30,29 @@ const ShowBook = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4'>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Id</span>
+        <div className='flex flex-col border-2 border-blue-400 rounded-xl w-fit p-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>ID:</span>
             <span>{book._id}</span>
           </div>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Title</span>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>Title:</span>
             <span>{book.title}</span>
           </div>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Author</span>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>Author:</span>
             <span>{book.author}</span>
           </div>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Publish Year</span>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>Publish Year:</span>
             <span>{book.publishYear}</span>
           </div>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Posted By</span>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>Posted By:</span>
             <span>{book.postedBy}</span>
           </div>
-          <div className='my-4'>
-            <span className='text-xl mr-4 text-gray-500'>Last Update Time</span>
+          <div className='my-3'>
+            <span className='text-xl mr-4 text-gray-600'>Last Update:</span>
             <span>{new Date(book.updatedAt).toString()}</span>
           </div>
         </div>

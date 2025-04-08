@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
+import { backend_URL } from '../config';
 
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +18,7 @@ const DeleteBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://readerslounge.onrender.com/books/${id}`)
+      .get(`${backend_URL}/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);
@@ -32,7 +33,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`https://readerslounge.onrender.com/books/${id}`)
+      .delete(`${backend_URL}/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted Successfully', { variant: 'success' });
@@ -64,7 +65,7 @@ const DeleteBook = () => {
       <h1 className='text-3xl my-4'>Delete Book</h1>
 
       {!isVerified ? (
-        <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
+        <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <h3 className='text-2xl mb-4'>Enter PIN to Delete this Book</h3>
           <input
             type='password'
