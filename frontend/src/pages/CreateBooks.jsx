@@ -82,7 +82,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-black'>bookPin (4 digit pin for editing and deleting) </label>
+          <label className='text-xl mr-4 text-black'>Book Pin (4 digit pin for editing and deleting) </label>
           <input
             type = 'number'
             value={bookPin}
