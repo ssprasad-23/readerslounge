@@ -45,16 +45,16 @@ npm run dev
 cd backend
 npm run dev
 
-Dependencies
+Dependencies: 
 
-Frontend:
+-Frontend:
 React
 React Router
 Axios
 Tailwind CSS
 React Icons
 
-Backend:
+-Backend:
 Express.js
 MongoDB
 Mongoose
