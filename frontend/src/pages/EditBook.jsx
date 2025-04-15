@@ -86,7 +86,7 @@ const EditBook = () => {
             maxLength='4'
             value={enteredPin}
             onChange={(e) => setEnteredPin(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center'
+            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center rounded-full'
             placeholder='4-digit PIN'
           />
           <button
