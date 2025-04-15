@@ -72,7 +72,7 @@ const DeleteBook = () => {
             maxLength='4'
             value={enteredPin}
             onChange={(e) => setEnteredPin(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center'
+            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center rounded-full'
             placeholder='4-digit PIN'
           />
           <button
@@ -84,10 +84,11 @@ const DeleteBook = () => {
           </button>
         </div>
       ) : (
-        <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
-          <h3 className='text-2xl'>Are you sure you want to delete this book?</h3>
+        // <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
+        <div className='flex flex-col rounded-xl w-[500px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center'>
+          <h3 className='text-center text-2xl'>Are you sure you want to delete this book?</h3>
           <button
-            className='p-4 bg-red-600 text-white m-8 w-full'
+            className='rounded-full p-4 bg-red-600 text-white m-8 w-44'
             onClick={handleDeleteBook}
           >
             Yes, Delete it
