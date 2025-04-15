@@ -38,15 +38,6 @@ Mongoose
 Node.js
 
 Website
-<img width="1558" alt="Screenshot 2024-11-12 at 3 13 48 AM" src="https://github.com/user-attachments/assets/623e8038-ce5b-4036-a437-2f239a70799b">
-
-Creating a book
-<img width="1541" alt="Screenshot 2024-11-12 at 3 14 01 AM" src="https://github.com/user-attachments/assets/64044403-db6e-48ce-a941-ef21b07ff8e8">
-
-Book Detail
-<img width="1370" alt="Screenshot 2024-11-12 at 3 17 48 AM" src="https://github.com/user-attachments/assets/c1fd521e-2123-4fba-98ce-3f0d64818ff0">
-
-Pin to edit and delete
-<img width="1541" alt="Screenshot 2024-11-12 at 3 14 23 AM" src="https://github.com/user-attachments/assets/5e8361d7-b8b9-452c-a512-ae643eb0072a">
-
+<img width="1558" alt="Screenshot 2024-11-12 at 3 13 48 AM" src="<img width="1724" alt="home" src="https://github.com/user-attachments/assets/b191fd2a-b824-404a-8b2d-c267ec85221e" />
+">
 
