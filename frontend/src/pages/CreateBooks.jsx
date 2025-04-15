@@ -82,7 +82,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-black'>bookPin (4 digit pin for editing and deleting) </label>
+          <label className='text-xl mr-4 text-black'>Book Pin (4 digit pin for editing and deleting) </label>
           <input
             type = 'number'
             value={bookPin}
@@ -91,7 +91,7 @@ const CreateBooks = () => {
           />
         </div>
         <div className='flex justify-center'>
-          <button className='p-2 bg-sky-300 m-8 rounded-full w-28' onClick={handleSaveBook}>
+          <button className='p-2 bg-blue-600 m-3 rounded-full w-28 text-white' onClick={handleSaveBook}>
             Save
           </button>
         </div>
