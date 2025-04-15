@@ -38,6 +38,6 @@ Mongoose
 Node.js
 
 Website
-<img width="1558" alt="Screenshot 2024-11-12 at 3 13 48 AM" src="<img width="1724" alt="home" src="https://github.com/user-attachments/assets/b191fd2a-b824-404a-8b2d-c267ec85221e" />
-">
+<img width="1724" alt="home" src="https://github.com/user-attachments/assets/b191fd2a-b824-404a-8b2d-c267ec85221e" />
+
 
