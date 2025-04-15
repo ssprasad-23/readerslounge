@@ -44,9 +44,9 @@ const CreateBooks = () => {
       <BackButton/>
       <h1 className='text-3xl my-4'>Create Book</h1>
       {loading ? <Spinner/>: ''}
-      <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+      <div className= 'flex flex-col rounded-xl w-[500px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <div>
-          <label className='text-xl mr-4 text-gray-500'> Title</label>
+          <label className='text-xl mr-4 text-black'> Title</label>
           <input
             type = 'text'
             value={title}
@@ -55,7 +55,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-gray-500'>Author</label>
+          <label className='text-xl mr-4 text-black'>Author</label>
           <input
             type = 'text'
             value={author}
@@ -64,7 +64,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
+          <label className='text-xl mr-4 text-black'>Publish Year</label>
           <input
             type = 'number'
             value={publishYear}
@@ -73,7 +73,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-gray-500'>Posted By</label>
+          <label className='text-xl mr-4 text-black'>Posted By</label>
           <input
             type = 'text'
             value={postedBy}
@@ -82,7 +82,7 @@ const CreateBooks = () => {
           />
         </div>
         <div>
-          <label className='text-xl mr-4 text-gray-500'>bookPin (4 digit pin for editing and deleting) </label>
+          <label className='text-xl mr-4 text-black'>Book Pin (4 digit pin for editing and deleting) </label>
           <input
             type = 'number'
             value={bookPin}
@@ -90,9 +90,11 @@ const CreateBooks = () => {
             className='border-2 border-gray-500 px-4 py-2 w-full'
           />
         </div>
-        <button className='p-2 bg-sky-300 m-8' onClick={handleSaveBook}>
-          Save
-        </button>
+        <div className='flex justify-center'>
+          <button className='p-2 bg-blue-600 m-3 rounded-full w-28 text-white' onClick={handleSaveBook}>
+            Save
+          </button>
+        </div>
       </div>
     </div>
   );

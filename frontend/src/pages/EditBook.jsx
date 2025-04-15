@@ -79,18 +79,18 @@ const EditBook = () => {
       <h1 className='text-3xl my-4'>Edit Book</h1>
 
       {!isVerified ? (
-        <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
+        <div className='flex flex-col items-center rounded-xl w-[500px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <h3 className='text-2xl mb-4'>Enter PIN to Edit this Book</h3>
           <input
             type='password'
             maxLength='4'
             value={enteredPin}
             onChange={(e) => setEnteredPin(e.target.value)}
-            className='border-2 border-gray-500 px-4 py-2 w-full mb-4'
+            className='border-2 border-gray-500 px-4 py-2 w-full mb-4 text-center rounded-full'
             placeholder='4-digit PIN'
           />
           <button
-            className='p-4 bg-blue-600 text-white w-full'
+            className='p-4 bg-blue-600 text-white rounded-full w-40'
             onClick={verifyPin}
             disabled={enteredPin.length !== 4}
           >
@@ -98,9 +98,9 @@ const EditBook = () => {
           </button>
         </div>
       ) : (
-        <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+        <div className='flex flex-col rounded-xl w-[500px] p-8 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <div>
-            <label className='text-xl mr-4 text-gray-500'> Title</label>
+            <label className='text-xl mr-4 text-black'> Title</label>
             <input
               type='text'
               value={title}
@@ -109,7 +109,7 @@ const EditBook = () => {
             />
           </div>
           <div>
-            <label className='text-xl mr-4 text-gray-500'>Author</label>
+            <label className='text-xl mr-4 text-black'>Author</label>
             <input
               type='text'
               value={author}
@@ -118,7 +118,7 @@ const EditBook = () => {
             />
           </div>
           <div>
-            <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
+            <label className='text-xl mr-4 text--black'>Publish Year</label>
             <input
               type='number'
               value={publishYear}
@@ -127,7 +127,7 @@ const EditBook = () => {
             />
           </div>
           <div>
-            <label className='text-xl mr-4 text-gray-500'>Posted By</label>
+            <label className='text-xl mr-4 text-black'>Posted By</label>
             <input
               type='text'
               value={postedBy}
@@ -135,13 +135,17 @@ const EditBook = () => {
               className='border-2 border-gray-500 px-4 py-2 w-full'
             />
           </div>
-          <button className='p-2 bg-sky-300 m-8' onClick={handleEditBook}>
-            Save Changes
-          </button>
+          <div className='flex justify-center'>
+            <button className='p-4 bg-blue-600 m-3 rounded-full w-28 text-white' onClick={handleEditBook}>
+              Save
+            </button>
+          </div>  
         </div>
       )}
     </div>
   );
 };
+
+// p-4 bg-blue-600 text-white rounded-full w-40
 
 export default EditBook;
