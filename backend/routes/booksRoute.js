@@ -39,7 +39,7 @@ router.post('/', async (request, response) => {
     }
 });
 
-// routes to Get All Boobs from database
+// routes to Get All Books from database
 router.get('/', async (request, response) => {
     try {
         const books = await Book.find({});
